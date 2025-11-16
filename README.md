@@ -1,43 +1,158 @@
-📝 Handwritten Character Recognition (A–Z) using Python & Deep Learning
+Handwritten Character Recognition using Python
+
+A Deep Learning Project using CNN & EMNIST Dataset
 
 
+📌 Table of Contents
 
+🎯 Project Overview
 
+💡 Motivation
 
+📊 Dataset Description
 
+🧼 Data Preprocessing
 
+🧠 CNN Model Architecture
 
+📈 Results & Evaluation
 
+🏁 Conclusion
 
+🚀 Future Enhancements
 
+📚 References
 
-🚀 Project Overview
+🛠 Technologies Used
 
-This project focuses on Handwritten English Alphabet (A–Z) Recognition using a Deep Learning Convolutional Neural Network (CNN).
-The model learns from image data and predicts characters with high accuracy.
+🗂 Folder Structure
 
-This project is ideal for:
-✔ Machine learning beginners
-✔ Students
-✔ Portfolio building
-✔ Research & academic work
-✔ Anyone interested in OCR (Optical Character Recognition)
+🔧 Installation
 
-📂 Folder Structure
-📁 Handwritten-Character-Recognition
-│
-├── 📁 dataset/               → Images (A–Z)  
-├── 📁 model/                 → Saved trained model  
-├── 📁 notebooks/             → Jupyter notebooks  
-├── 📁 src/                   → Python source code  
-│   ├── train_model.py  
-│   ├── evaluate_model.py  
-│   └── predict.py  
-│
-├── requirements.txt          → Dependencies  
-└── README.md                 → This file  
+📦 Requirements
 
-🧠 Technologies Used
+👨‍💻 Author
+
+🎯 Project Overview
+
+Handwriting varies greatly from person to person, making it difficult for computers to recognize handwritten text. Handwritten Character Recognition (HCR) solves this challenge by using machine learning to identify handwritten digits and letters.
+
+This project uses a Convolutional Neural Network (CNN) trained on the EMNIST dataset to accurately classify handwritten characters.
+The model achieves 92–95% accuracy, demonstrating strong performance in recognizing diverse handwriting styles.
+
+💡 Motivation
+
+Manual transcription of handwritten text is slow and error-prone. Automating this task improves accuracy and efficiency.
+
+Real-world applications:
+
+Digitizing handwritten documents
+
+Postal code and envelope reading
+
+Bank cheque and form scanning
+
+Educational handwriting analysis
+
+This project aims to help OCR (Optical Character Recognition) systems become more intelligent and reliable.
+
+📊 Dataset Description — EMNIST
+
+The EMNIST dataset extends MNIST and includes handwritten letters and digits.
+
+Dataset Features
+
+Classes: 39
+
+Image Type: Grayscale
+
+Image Size: 28×28 (resized to 64×64)
+
+Train/Test Split: Yes
+
+Diversity: Many handwriting styles
+
+Its large variation makes it excellent for training a robust CNN model.
+
+🧼 Data Preprocessing
+
+To prepare the data for training:
+
+Load all image files from dataset folders
+
+Convert to grayscale using OpenCV
+
+Resize images from 28×28 to 64×64
+
+Save cleaned images into processed folders
+
+Create TensorFlow datasets for faster training
+
+These steps ensure consistent and optimized data input.
+
+🧠 CNN Model Architecture
+
+The system uses a deep Convolutional Neural Network with:
+
+✔ Convolution Layers
+
+Detect edges, curves, strokes.
+
+✔ MaxPooling Layers
+
+Reduce size, prevent overfitting.
+
+✔ Dense Layers
+
+Final classification.
+
+✔ Activation Functions
+
+ReLU — learns complex handwriting
+
+Softmax — outputs class probabilities
+
+This architecture makes the model powerful for handwritten character recognition.
+
+📈 Results & Evaluation
+
+The model was trained and validated on EMNIST.
+
+Metric	Score
+Accuracy	92–95%
+Precision	0.92
+Recall	0.92
+F1-score	0.92
+
+Confusion occurred mainly between similar shapes (e.g., O vs 0, I vs l), but overall performance was excellent.
+
+🏁 Conclusion
+
+This project demonstrates that CNNs combined with image preprocessing can accurately classify handwritten characters.
+The model’s high accuracy makes it suitable for real-world OCR applications.
+
+🚀 Future Enhancements
+
+Extend classification to words or full sentences
+
+Multi-language handwriting support
+
+Real-time recognition in scanners/mobile apps
+
+Use stronger architectures like ResNet, EfficientNet, etc.
+
+📚 References
+
+EMNIST Dataset — NIST
+
+TensorFlow Documentation
+
+OpenCV Python Library
+
+LeCun et al. (1998). Gradient-based learning applied to document recognition
+
+🛠 Technologies Used
+Programming
 
 Python
 
@@ -45,41 +160,63 @@ TensorFlow / Keras
 
 NumPy
 
-Pandas
-
-Matplotlib
-
 OpenCV
 
-📊 Model Architecture
+Pandas
 
-The core of the project is a CNN-based deep neural network, including:
+Matplotlib / Seaborn
 
-Convolution Layers
+Tools
 
-MaxPooling Layers
+Jupyter Notebook
 
-Dense Layers
+VS Code
 
-Dropout
+Git & GitHub
 
-Softmax Output Layer
+🗂 Folder Structure
+Handwritten-Character-Recognition/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── src/
+│   ├── preprocess.py
+│   ├── train_model.py
+│   ├── evaluate_model.py
+│
+├── notebooks/
+│   └── experiments.ipynb
+│
+├── models/
+│   └── cnn_model.h5
+│
+├── screenshots/
+│
+├── README.md
+└── requirements.txt
 
-🔧 Installation & Setup
+🔧 Installation
+1️⃣ Clone repo
+git clone https://github.com/your-username/Handwritten-Character-Recognition.git
+cd Handwritten-Character-Recognition
 
-Clone the repository:
-
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-
-
-Install dependencies:
-
+2️⃣ Install dependencies
 pip install -r requirements.txt
 
-📦 requirements.txt
+3️⃣ Run preprocessing
+python src/preprocess.py
 
-Copy of the file included automatically:
+4️⃣ Train model
+python src/train_model.py
+
+5️⃣ Evaluate
+python src/evaluate_model.py
+
+📦 Requirements
+
+Add this to requirements.txt:
 
 tensorflow==2.13.0
 numpy==1.25.0
@@ -90,55 +227,8 @@ seaborn==0.12.2
 opencv-python==4.8.0.74
 jupyter==1.0.0
 
-🏋️ Train the Model
-python src/train_model.py
+👨‍💻 Author
 
-📈 Evaluate the Model
-python src/evaluate_model.py
-
-🔤 Predict a Character
-python src/predict.py --image test_image.png
-
-🖼 Example Output
-Input Image	Predicted Character
-
-	A
-⭐ Features
-
-✔ Recognizes handwritten letters A–Z
-✔ Deep Learning CNN model
-✔ High accuracy
-✔ Easy-to-run Python scripts
-✔ Clean project structure
-✔ Good for ML/AI portfolios
-
-📚 Future Improvements
-
-Add digit recognition (0–9)
-
-Build a GUI
-
-Deploy as a web app (Flask/React)
-
-Train on custom handwriting data
-
-🤝 Contributing
-
-Feel free to contribute!
-
-Fork the repo
-
-Create a new branch
-
-Submit a pull request
-
-📜 License
-
-This project is licensed under the MIT License.
-
-💬 Contact
-
-Author: Your Name
-📧 Email: your.email@example.com
-
-🔗 GitHub: https://github.com/your-username
+Mohammad Naeem Mollah
+Dept. of Computer Science & Engineering
+United International University
