@@ -1,169 +1,144 @@
-Handwritten Character Recognition using Python
-
-A Deep Learning Project using CNN & EMNIST Dataset
+📝 Handwritten Character Recognition (A–Z) using Python & Deep Learning
 
 
 
-📌 Table of Contents
-
-🎯 Project Overview
-💡 Motivation
-📊 Dataset Description
-🧼 Data Preprocessing
-🧠 CNN Model Architecture
-📈 Results & Evaluation
-🚀 Future Enhancements
-📚 References
-🛠 Technologies Used
-🗂 Folder Structure
-🔧 Installation
-🏁 Conclusion
-👨‍💻 Author
 
 
 
-🎯 Project Overview
-
-Handwriting varies greatly from person to person, making it difficult for computers to recognize handwritten text. Handwritten Character Recognition (HCR) solves this challenge by using machine learning to identify handwritten digits and letters.
-
-This project uses a Convolutional Neural Network (CNN) trained on the EMNIST dataset to accurately classify handwritten characters.
-The model achieves 92–95% accuracy, demonstrating strong performance in recognizing diverse handwriting styles.
-
-💡 Motivation
-
-Manual transcription of handwritten text is slow and error-prone. Automating this task improves accuracy and efficiency.
-
-Real-world applications:
-
-Digitizing handwritten documents
-Postal code and envelope reading
-Bank cheque and form scanning
-Educational handwriting analysis
-This project aims to help OCR (Optical Character Recognition) systems become more intelligent and reliable.
-
-📊 Dataset Description — EMNIST
-
-The EMNIST dataset extends MNIST and includes handwritten letters and digits.
-Dataset Features
-Classes: 39
-Image Type: Grayscale
-Image Size: 28×28 (resized to 64×64)
-Train/Test Split: Yes
-Diversity: Many handwriting styles
-Its large variation makes it excellent for training a robust CNN model.
-
-🧼 Data Preprocessing
-
-To prepare the data for training:
-Load all image files from dataset folders
-Convert to grayscale using OpenCV
-Resize images from 28×28 to 64×64
-Save cleaned images into processed folders
-Create TensorFlow datasets for faster training
-These steps ensure consistent and optimized data input.
-
-🧠 CNN Model Architecture
-
-The system uses a deep Convolutional Neural Network with:
-✔ Convolution Layers
-Detect edges, curves, strokes.
-✔ MaxPooling Layers
-Reduce size, prevent overfitting.
-✔ Dense Layers
-Final classification.
-✔ Activation Functions
-ReLU — learns complex handwriting
-Softmax — outputs class probabilities
-This architecture makes the model powerful for handwritten character recognition.
 
 
-🚀 Future Enhancements
 
-Extend classification to words or full sentences
-Multi-language handwriting support
-Real-time recognition in scanners/mobile apps
-Use stronger architectures like ResNet, EfficientNet, etc.
 
-📚 References
 
-EMNIST Dataset — NIST
-TensorFlow Documentation
-OpenCV Python Library
-LeCun et al. (1998). Gradient-based learning applied to document recognition
 
-🛠 Technologies Used
+🚀 Project Overview
 
-Programming
+This project focuses on Handwritten English Alphabet (A–Z) Recognition using a Deep Learning Convolutional Neural Network (CNN).
+The model learns from image data and predicts characters with high accuracy.
+
+This project is ideal for:
+✔ Machine learning beginners
+✔ Students
+✔ Portfolio building
+✔ Research & academic work
+✔ Anyone interested in OCR (Optical Character Recognition)
+
+📂 Folder Structure
+📁 Handwritten-Character-Recognition
+│
+├── 📁 dataset/               → Images (A–Z)  
+├── 📁 model/                 → Saved trained model  
+├── 📁 notebooks/             → Jupyter notebooks  
+├── 📁 src/                   → Python source code  
+│   ├── train_model.py  
+│   ├── evaluate_model.py  
+│   └── predict.py  
+│
+├── requirements.txt          → Dependencies  
+└── README.md                 → This file  
+
+🧠 Technologies Used
+
 Python
+
 TensorFlow / Keras
+
 NumPy
-OpenCV
+
 Pandas
-Matplotlib / Seaborn
-Tools
-Jupyter Notebook
-VS Code
-Git & GitHub
 
-🗂 Folder Structure
+Matplotlib
 
-Handwritten-Character-Recognition/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── src/
-│   ├── preprocess.py
-│   ├── train_model.py
-│   ├── evaluate_model.py
-│
-├── notebooks/
-│   └── experiments.ipynb
-│
-├── models/
-│   └── cnn_model.h5
-│
-├── screenshots/
-│
-├── README.md
-└── requirements.txt
+OpenCV
 
-🔧 Installation
+📊 Model Architecture
+
+The core of the project is a CNN-based deep neural network, including:
+
+Convolution Layers
+
+MaxPooling Layers
+
+Dense Layers
+
+Dropout
+
+Softmax Output Layer
+
+🔧 Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 
 
-1️⃣ Clone repo
-git clone https://github.com/your-username/Handwritten-Character-Recognition.git
-cd Handwritten-Character-Recognition
+Install dependencies:
 
-2️⃣ Install dependencies
 pip install -r requirements.txt
 
-3️⃣ Run preprocessing
-python src/preprocess.py
+📦 requirements.txt
 
-4️⃣ Train model
+Copy of the file included automatically:
+
+tensorflow==2.13.0
+numpy==1.25.0
+pandas==2.1.0
+scikit-learn==1.3.0
+matplotlib==3.8.0
+seaborn==0.12.2
+opencv-python==4.8.0.74
+jupyter==1.0.0
+
+🏋️ Train the Model
 python src/train_model.py
 
-5️⃣ Evaluate
+📈 Evaluate the Model
 python src/evaluate_model.py
 
+🔤 Predict a Character
+python src/predict.py --image test_image.png
 
+🖼 Example Output
+Input Image	Predicted Character
 
+	A
+⭐ Features
 
-🏁 Conclusion
+✔ Recognizes handwritten letters A–Z
+✔ Deep Learning CNN model
+✔ High accuracy
+✔ Easy-to-run Python scripts
+✔ Clean project structure
+✔ Good for ML/AI portfolios
 
-This project demonstrates that CNNs combined with image preprocessing can accurately classify handwritten characters.
-The model’s high accuracy makes it suitable for real-world OCR applications.
+📚 Future Improvements
 
+Add digit recognition (0–9)
 
+Build a GUI
 
-👨‍💻 Author
+Deploy as a web app (Flask/React)
 
-Department: Computer Science and Engineering
-Course: CSE3812 — Artificial Intelligence Lab
-Project Title: Handwritten Character Recognition using Python
-Student Name: Mohammad Naeem Mollah
-ID: 0112310202
-Submission Date: 21 October 2025
+Train on custom handwriting data
 
+🤝 Contributing
+
+Feel free to contribute!
+
+Fork the repo
+
+Create a new branch
+
+Submit a pull request
+
+📜 License
+
+This project is licensed under the MIT License.
+
+💬 Contact
+
+Author: Your Name
+📧 Email: your.email@example.com
+
+🔗 GitHub: https://github.com/your-username
