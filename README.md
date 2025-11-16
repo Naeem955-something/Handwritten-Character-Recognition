@@ -15,7 +15,6 @@ A Deep Learning Project using CNN & EMNIST Dataset
 
 🧠 CNN Model Architecture
 
-📈 Results & Evaluation
 
 🏁 Conclusion
 
@@ -25,11 +24,10 @@ A Deep Learning Project using CNN & EMNIST Dataset
 
 🛠 Technologies Used
 
-🗂 Folder Structure
+
 
 🔧 Installation
 
-📦 Requirements
 
 👨‍💻 Author
 
@@ -114,18 +112,6 @@ Softmax — outputs class probabilities
 
 This architecture makes the model powerful for handwritten character recognition.
 
-📈 Results & Evaluation
-
-The model was trained and validated on EMNIST.
-
-Metric	Score
-Accuracy	92–95%
-Precision	0.92
-Recall	0.92
-F1-score	0.92
-
-Confusion occurred mainly between similar shapes (e.g., O vs 0, I vs l), but overall performance was excellent.
-
 🏁 Conclusion
 
 This project demonstrates that CNNs combined with image preprocessing can accurately classify handwritten characters.
@@ -174,29 +160,6 @@ VS Code
 
 Git & GitHub
 
-🗂 Folder Structure
-Handwritten-Character-Recognition/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── src/
-│   ├── preprocess.py
-│   ├── train_model.py
-│   ├── evaluate_model.py
-│
-├── notebooks/
-│   └── experiments.ipynb
-│
-├── models/
-│   └── cnn_model.h5
-│
-├── screenshots/
-│
-├── README.md
-└── requirements.txt
-
 🔧 Installation
 1️⃣ Clone repo
 git clone https://github.com/your-username/Handwritten-Character-Recognition.git
@@ -214,18 +177,7 @@ python src/train_model.py
 5️⃣ Evaluate
 python src/evaluate_model.py
 
-📦 Requirements
 
-Add this to requirements.txt:
-
-tensorflow==2.13.0
-numpy==1.25.0
-pandas==2.1.0
-scikit-learn==1.3.0
-matplotlib==3.8.0
-seaborn==0.12.2
-opencv-python==4.8.0.74
-jupyter==1.0.0
 
 👨‍💻 Author
 
